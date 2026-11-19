@@ -38,7 +38,7 @@ namespace MyFirstApp.Controllers
                 HttpContext.Session.SetString("StudentId", student.StudentId);
                 HttpContext.Session.SetString("StudentEmail", student.Email);
 
-                return RedirectToAction("Index", "Feedback");
+                return Redirect("/Pages/Feedback");
             }
 
 

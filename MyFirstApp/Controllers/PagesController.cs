@@ -16,6 +16,11 @@ namespace MyFirstApp.Controllers
 
         public IActionResult Feedback()
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("StudentId")))
+            {
+                return RedirectToAction("Login", "Student");
+            }
+
             return View();
         }
 
