@@ -1,0 +1,17 @@
+﻿@model MyFirstApp.Models.Student
+
+
+
+@if (TempData["success"] != null)
+{
+    <script>
+        alert('@TempData["success"]')
+    </script>
+}
+
+<h2>Registration Successfully</h2>
+
+<p>Name: @Model.StudentName</p>
+<p>Studentid: @Model.StudentId</p>
+<p>Course: @Model.Course</p>
+<p>Email: @Model.Email</p>
